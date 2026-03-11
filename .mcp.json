@@ -2,12 +2,14 @@
   "mcpServers": {
     "n8n": {
       "command": "npx",
-      "args": ["-y", "n8n-mcp"],
-      "env": {
-        "N8N_API_URL": "${N8N_API_URL}",
-        "N8N_API_KEY": "${N8N_API_KEY}",
-        "MCP_MODE": "stdio"
-      }
+      "args": [
+        "-y",
+        "supergateway",
+        "--streamableHttp",
+        "${N8N_BASE_URL}/mcp-server/http",
+        "--header",
+        "authorization:Bearer ${N8N_API_KEY}"
+      ]
     },
     "nocodb-techgarden": {
       "command": "npx",

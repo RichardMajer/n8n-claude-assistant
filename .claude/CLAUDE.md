@@ -3,7 +3,7 @@
 ## Kontext projektu
 
 n8n self-hosted na VPS, Docker, verzia 1.123.16.
-- **n8n API**: `https://n8n.myrsolutions.dev/api/v1`
+- **n8n**: `https://n8n.myrsolutions.dev` (MCP server: `/mcp-server/http`)
 - **NocoDB**: `https://noco-db.myrsolutions.dev`
 - **Backup repo**: `myrsolutions/n8n-workflows-backup` (private GitHub)
 
