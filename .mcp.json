@@ -11,23 +11,23 @@
     },
     "nocodb-techgarden": {
       "command": "npx",
-      "args": ["mcp-remote", "${NOCODB_BASE_URL}/mcp/${NOCODB_BASE_ID_TECHGARDEN}", "--header", "xc-mcp-token: ${NOCODB_MCP_TOKEN_TECHGARDEN}"]
+      "args": ["mcp-remote", "${NOCODB_BASE_URL}/mcp/${NOCODB_MCP_ID_TECHGARDEN}", "--header", "xc-mcp-token: ${NOCODB_MCP_TOKEN_TECHGARDEN}"]
     },
     "nocodb-efix": {
       "command": "npx",
-      "args": ["mcp-remote", "${NOCODB_BASE_URL}/mcp/${NOCODB_BASE_ID_EFIX}", "--header", "xc-mcp-token: ${NOCODB_MCP_TOKEN_EFIX}"]
+      "args": ["mcp-remote", "${NOCODB_BASE_URL}/mcp/${NOCODB_MCP_ID_EFIX}", "--header", "xc-mcp-token: ${NOCODB_MCP_TOKEN_EFIX}"]
     },
     "nocodb-general": {
       "command": "npx",
-      "args": ["mcp-remote", "${NOCODB_BASE_URL}/mcp/${NOCODB_BASE_ID_GENERAL}", "--header", "xc-mcp-token: ${NOCODB_MCP_TOKEN_GENERAL}"]
+      "args": ["mcp-remote", "${NOCODB_BASE_URL}/mcp/${NOCODB_MCP_ID_GENERAL}", "--header", "xc-mcp-token: ${NOCODB_MCP_TOKEN_GENERAL}"]
     },
     "nocodb-kassa": {
       "command": "npx",
-      "args": ["mcp-remote", "${NOCODB_BASE_URL}/mcp/${NOCODB_BASE_ID_KASSA}", "--header", "xc-mcp-token: ${NOCODB_MCP_TOKEN_KASSA}"]
+      "args": ["mcp-remote", "${NOCODB_BASE_URL}/mcp/${NOCODB_MCP_ID_KASSA}", "--header", "xc-mcp-token: ${NOCODB_MCP_TOKEN_KASSA}"]
     },
     "nocodb-skladan": {
       "command": "npx",
-      "args": ["mcp-remote", "${NOCODB_BASE_URL}/mcp/${NOCODB_BASE_ID_SKLADAN}", "--header", "xc-mcp-token: ${NOCODB_MCP_TOKEN_SKLADAN}"]
+      "args": ["mcp-remote", "${NOCODB_BASE_URL}/mcp/${NOCODB_MCP_ID_SKLADAN}", "--header", "xc-mcp-token: ${NOCODB_MCP_TOKEN_SKLADAN}"]
     }
   }
 }
