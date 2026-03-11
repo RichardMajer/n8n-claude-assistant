@@ -15,10 +15,10 @@ Skopíruj `.env.example` → `.env` a doplň hodnoty:
 cp .env.example .env
 ```
 
-### n8n API Key
+### n8n Access Token
 1. Otvoriť `https://n8n.myrsolutions.dev`
-2. Settings → API → Create API Key
-3. Vložiť do `N8N_API_KEY`
+2. Settings → MCP → skopírovať Access Token
+3. Vložiť do `N8N_ACCESS_TOKEN`
 
 ### NocoDB MCP tokeny (per base)
 Pre každú base (`Techgarden`, `Efix`, `General`, `Kašša`, `Skladan`):
@@ -53,10 +53,8 @@ gh repo create myrsolutions/n8n-workflows-backup --private
 
 Otestuj n8n MCP:
 ```bash
-N8N_API_URL=https://n8n.myrsolutions.dev/api/v1 \
-N8N_API_KEY=<tvoj-key> \
-MCP_MODE=stdio \
-npx -y n8n-mcp
+npx -y supergateway --streamableHttp https://n8n.myrsolutions.dev/mcp-server/http \
+  --header "authorization:Bearer <N8N_ACCESS_TOKEN>"
 ```
 
 Otestuj NocoDB MCP (Techgarden):

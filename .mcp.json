@@ -8,7 +8,7 @@
         "--streamableHttp",
         "${N8N_BASE_URL}/mcp-server/http",
         "--header",
-        "authorization:Bearer ${N8N_API_KEY}"
+        "authorization:Bearer ${N8N_ACCESS_TOKEN}"
       ]
     },
     "nocodb-techgarden": {
