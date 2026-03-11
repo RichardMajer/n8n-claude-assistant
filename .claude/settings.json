@@ -1,0 +1,27 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "mcp__n8n__update_workflow|mcp__n8n__delete_workflow",
+        "hooks": [{"type": "command", "command": ".claude/hooks/pre-wf-modify.sh"}]
+      },
+      {
+        "matcher": "Bash",
+        "hooks": [{"type": "command", "command": ".claude/hooks/bash-safety.sh"}]
+      }
+    ]
+  },
+  "permissions": {
+    "allow": [
+      "mcp__n8n__*",
+      "mcp__nocodb-*__*",
+      "mcp__playwright__*",
+      "mcp__n8n-docs__*",
+      "Bash(git *)",
+      "Bash(gh *)",
+      "Bash(curl *)",
+      "Bash(npx *)"
+    ],
+    "deny": []
+  }
+}
