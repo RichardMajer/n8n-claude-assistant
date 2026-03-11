@@ -1,35 +1,57 @@
 {
   "mcpServers": {
     "n8n": {
-      "command": "npx",
-      "args": [
-        "-y",
-        "supergateway",
-        "--streamableHttp",
-        "${N8N_BASE_URL}/mcp-server/http",
-        "--header",
-        "authorization:Bearer ${N8N_ACCESS_TOKEN}"
-      ]
+      "command": "sh",
+      "args": ["-c", "npx -y supergateway --streamableHttp \"$N8N_BASE_URL/mcp-server/http\" --header \"authorization:Bearer $N8N_ACCESS_TOKEN\""],
+      "env": {
+        "N8N_BASE_URL": "${N8N_BASE_URL}",
+        "N8N_ACCESS_TOKEN": "${N8N_ACCESS_TOKEN}"
+      }
     },
     "nocodb-techgarden": {
-      "command": "npx",
-      "args": ["mcp-remote", "${NOCODB_BASE_URL}/mcp/${NOCODB_MCP_ID_TECHGARDEN}", "--header", "xc-mcp-token: ${NOCODB_MCP_TOKEN_TECHGARDEN}"]
+      "command": "sh",
+      "args": ["-c", "npx mcp-remote \"$NOCODB_BASE_URL/mcp/$NOCODB_MCP_ID\" --header \"xc-mcp-token: $NOCODB_MCP_TOKEN\""],
+      "env": {
+        "NOCODB_BASE_URL": "${NOCODB_BASE_URL}",
+        "NOCODB_MCP_ID": "${NOCODB_MCP_ID_TECHGARDEN}",
+        "NOCODB_MCP_TOKEN": "${NOCODB_MCP_TOKEN_TECHGARDEN}"
+      }
     },
     "nocodb-efix": {
-      "command": "npx",
-      "args": ["mcp-remote", "${NOCODB_BASE_URL}/mcp/${NOCODB_MCP_ID_EFIX}", "--header", "xc-mcp-token: ${NOCODB_MCP_TOKEN_EFIX}"]
+      "command": "sh",
+      "args": ["-c", "npx mcp-remote \"$NOCODB_BASE_URL/mcp/$NOCODB_MCP_ID\" --header \"xc-mcp-token: $NOCODB_MCP_TOKEN\""],
+      "env": {
+        "NOCODB_BASE_URL": "${NOCODB_BASE_URL}",
+        "NOCODB_MCP_ID": "${NOCODB_MCP_ID_EFIX}",
+        "NOCODB_MCP_TOKEN": "${NOCODB_MCP_TOKEN_EFIX}"
+      }
     },
     "nocodb-general": {
-      "command": "npx",
-      "args": ["mcp-remote", "${NOCODB_BASE_URL}/mcp/${NOCODB_MCP_ID_GENERAL}", "--header", "xc-mcp-token: ${NOCODB_MCP_TOKEN_GENERAL}"]
+      "command": "sh",
+      "args": ["-c", "npx mcp-remote \"$NOCODB_BASE_URL/mcp/$NOCODB_MCP_ID\" --header \"xc-mcp-token: $NOCODB_MCP_TOKEN\""],
+      "env": {
+        "NOCODB_BASE_URL": "${NOCODB_BASE_URL}",
+        "NOCODB_MCP_ID": "${NOCODB_MCP_ID_GENERAL}",
+        "NOCODB_MCP_TOKEN": "${NOCODB_MCP_TOKEN_GENERAL}"
+      }
     },
     "nocodb-kassa": {
-      "command": "npx",
-      "args": ["mcp-remote", "${NOCODB_BASE_URL}/mcp/${NOCODB_MCP_ID_KASSA}", "--header", "xc-mcp-token: ${NOCODB_MCP_TOKEN_KASSA}"]
+      "command": "sh",
+      "args": ["-c", "npx mcp-remote \"$NOCODB_BASE_URL/mcp/$NOCODB_MCP_ID\" --header \"xc-mcp-token: $NOCODB_MCP_TOKEN\""],
+      "env": {
+        "NOCODB_BASE_URL": "${NOCODB_BASE_URL}",
+        "NOCODB_MCP_ID": "${NOCODB_MCP_ID_KASSA}",
+        "NOCODB_MCP_TOKEN": "${NOCODB_MCP_TOKEN_KASSA}"
+      }
     },
     "nocodb-skladan": {
-      "command": "npx",
-      "args": ["mcp-remote", "${NOCODB_BASE_URL}/mcp/${NOCODB_MCP_ID_SKLADAN}", "--header", "xc-mcp-token: ${NOCODB_MCP_TOKEN_SKLADAN}"]
+      "command": "sh",
+      "args": ["-c", "npx mcp-remote \"$NOCODB_BASE_URL/mcp/$NOCODB_MCP_ID\" --header \"xc-mcp-token: $NOCODB_MCP_TOKEN\""],
+      "env": {
+        "NOCODB_BASE_URL": "${NOCODB_BASE_URL}",
+        "NOCODB_MCP_ID": "${NOCODB_MCP_ID_SKLADAN}",
+        "NOCODB_MCP_TOKEN": "${NOCODB_MCP_TOKEN_SKLADAN}"
+      }
     }
   }
 }
